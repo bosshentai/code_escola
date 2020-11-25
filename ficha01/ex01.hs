@@ -8,27 +8,27 @@ defina duas funcoes de
 1 condicional
 2 guarda
 -}
-maior(x,y) = if x > y then x
+maiorCondicao2(x,y) = if x > y then x
             else y
 
-maior2(x,y)| x > y = x
+maiorGuarda2(x,y)| x > y = x
            | otherwise = y
 
 -- exercicio 2
-maior3(x,y,z) = if x > y && x > z then
+maiorCondicao3(x,y,z) = if x > y && x > z then
                 x
             else if y > x && y > z then
                 y
             else
                 z
-maior4(x,y,z)| x > y && x > z = x
+maiorGuarda3(x,y,z)| x > y && x > z = x
              | y > x && y > z = y
              | otherwise = z
 -- exercicio 3
-maior5(x,y,z) = maior2( maior2(x,y) , maior(x,z))
+maior(x,y,z) = maiorCondicao2( maiorCondicao2(x,y) , maiorCondicao2(x,z))
 
 -- exercicio 4
-nomeNumero  x = if x == 1 then
+nomeNumeroCondicao  x = if x == 1 then
                 "um"
             else if x == 2 then
                 "dois"
@@ -51,53 +51,64 @@ nomeNumero  x = if x == 1 then
             else "Numero invalido"
 
 
+nomeNumeroGuarda x | x == 1 = "um"
+                   | x == 2 = "dois"
+                   | x == 3 = "tres"
+                   | x == 4 = "quarto"
+                   | x == 5 = "cinco"
+                   | x == 6 = "seis"
+                   | x == 7 = "sete"
+                   | x == 8 = "oito"
+                   | x == 9 = "nove"
+                   | x == 10 = "dez"
+                   |otherwise = "Numero invalido"
 -- exercicio 5
 --dado(dia,mes,ano)| (dia > 0 && dia <= 31) && ( mes > 0 && mes <= 12) = True
 --                 | otherwise = False
 
 --dado:: Integral(Integral dia,Integral mes,Integral ano) => a -> b -> c -> Bool
-dia31(dia) = if dia > 0 && dia <= 31 then
+dia31Condicao(dia) = if dia > 0 && dia <= 31 then
                 True
             else
                 False
 
-dia30(dia) = if dia > 0 && dia <= 30 then
+dia30Condicao(dia) = if dia > 0 && dia <= 30 then
                 True
             else
                 False
 
-dia29(dia) = if dia > 0  && dia <=29 then
+dia29Condicao(dia) = if dia > 0  && dia <=29 then
                  True
              else
                  False
 
-dia28(dia) = if dia > 0 && dia <= 28 then
+dia28Condicao(dia) = if dia > 0 && dia <= 28 then
                     True
              else
                 False
 
-bisexto(dia,ano) = if (mod ano 100 /= 0) && (mod ano 4 == 0) || ( mod ano 400 == 0) then
-                        dia28(dia)
+bisextoCondicao(dia,ano) = if (mod ano 100 /= 0) && (mod ano 4 == 0) || ( mod ano 400 == 0) then
+                        dia28Condicao(dia)
                    else
-                        dia29(dia)
+                        dia29Condicao(dia)
 
 
 
 
 dado(dia,mes,ano) = if ano > 0 then
                         case mes of
-                            1 -> dia31(dia)
-                            2 -> bisexto(dia,ano)
-                            3 -> dia31(dia)
-                            4 -> dia30(dia)
-                            5 -> dia31(dia)
-                            6 -> dia30(dia)
-                            7 -> dia31(dia)
-                            8 -> dia31(dia)
-                            9 -> dia30(dia)
-                            10 -> dia31(dia)
-                            11 -> dia30(dia)
-                            12 -> dia31(dia)
+                            1 -> dia31Condicao(dia)
+                            2 -> bisextoCondicao(dia,ano)
+                            3 -> dia31Condicao(dia)
+                            4 -> dia30Condicao(dia)
+                            5 -> dia31Condicao(dia)
+                            6 -> dia30Condicao(dia)
+                            7 -> dia31Condicao(dia)
+                            8 -> dia31Condicao(dia)
+                            9 -> dia30Condicao(dia)
+                            10 -> dia31Condicao(dia)
+                            11 -> dia30Condicao(dia)
+                            12 -> dia31Condicao(dia)
                             _ -> False
                     else
                         False
