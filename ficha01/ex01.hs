@@ -78,12 +78,12 @@ dia30Condicao(dia) = if dia > 0 && dia <= 30 then
                 False
 
 dia29Condicao(dia) = if dia > 0  && dia <=29 then
-                 True
+                True
              else
                  False
 
 dia28Condicao(dia) = if dia > 0 && dia <= 28 then
-                    True
+                True
              else
                 False
 
@@ -121,6 +121,6 @@ imposto2(x) = x * 0.12
 resultado(x) = x - imposto(x)
 resultado2(x) = x - imposto2(x)
 
-salario(x) | (x >= 11000 && x < 35000) = resultado(x)
+salario(x)  | (x >= 11000 && x < 35000) = resultado(x)
             | x >= 35000 = resultado2(x)
             | otherwise = 0
