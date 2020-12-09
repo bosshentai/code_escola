@@ -17,7 +17,7 @@ pauta2 = if resultado >= 12 && resultado <= 20 then
            "aprovado"
       else if resultado < 12 && resultado >= 8 then
           "exame"
-      else 
+      else
           "reprovado"
 
 
