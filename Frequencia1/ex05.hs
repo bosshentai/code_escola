@@ -1,25 +1,25 @@
 -- exercicio 5
 lomba = ["a","b","c"]
-igualTail:: [a] -> Bool
-igualTail[] = True
-igualTail(a) = False
+igualTail:: [a] -> [a]
+igualTail[] =  []
+igualTail(a) = tail a
 
 
 ver = igualTail lomba
 
 
 -- guardas
-igualTail3 :: [a] -> Bool
-igualTail3 a | null a = True
-             | otherwise = False
+igualTail3 :: [a] -> [a]
+igualTail3 a | null a = []
+             | otherwise = tail a
 
 
 
 --a) condi
-igualTail2 :: [a] -> Bool
+igualTail2 :: [a] -> [a]
 igualTail2 a = if null a then
-                    True
+                    []
                 else
-                    False
+                    tail a
 
 ver2 = igualTail2 lomba
