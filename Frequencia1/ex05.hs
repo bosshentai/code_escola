@@ -2,7 +2,7 @@
 lomba = ["a","b","c"]
 igualTail:: [a] -> [a]
 igualTail[] =  []
-igualtail(_:xs) = xs
+igualTail(_:xs) = xs
 --igualTail(a) = tail a
 
 
