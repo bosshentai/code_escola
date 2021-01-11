@@ -1,0 +1,1 @@
+verificarElemento x array = x `elem` array

@@ -1,0 +1,1 @@
+identicos:: Int -> a -> [a]
