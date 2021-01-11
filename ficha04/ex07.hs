@@ -1,0 +1,1 @@
+agruparLista xs1 xs2 =   [x | xs <- xs1, x <- xs2]
