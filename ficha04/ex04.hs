@@ -1,2 +1,2 @@
 identicos:: Int -> a -> [a]
-identicos num b = [b]
+identicos num b = replicate num b 
