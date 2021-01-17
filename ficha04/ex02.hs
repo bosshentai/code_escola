@@ -2,7 +2,7 @@
 
 listaPrimos:: [Int] -> [Int]
 listaPrimos [] = []
-listaPrimos [1] = []
+--listaPrimos [1] = []
 listaPrimos (x:xs) = [x] ++ listaPrimos teste
                     where
                        teste = [ a | a <- xs, primo a]
