@@ -1,11 +1,18 @@
-type Nome = String
-type Sexo = Char
-type Nomesux = [String]
+
 
 
 teste = [("Maria","f"),("Pedro","m"),("Mario","m")]
+-- teste2 = ("Maria","f")
 
 
 
---sufixo:: String -> (Nome,Sexo) -> Nomesux
-sufixo pre (x:xs) = map  pre (head x)
+f_vs_m (x,y) |  y == "f" = "Sra."++x
+           |  y == "m" = "Sr."++x
+
+
+--resultado = f_vs_m teste2 
+
+sufixo p lista = map (f_vs_m ) lista
+
+resultado = sufixo "Sr." teste
+
