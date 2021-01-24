@@ -1,0 +1,4 @@
+--a= (++) [a] -> [a] -> [a]
+--b= Int -> [a] -> [a]
+--c = map (a -> b) [a] -> [b]
+--d = filter (a-> Bool) -> [a] -> [a]
