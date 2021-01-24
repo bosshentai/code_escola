@@ -21,7 +21,7 @@ myPassword palavra | tamanho <= 7 = Fraca
                         ver_Upper = any isUpper palavra
                         casoFraca = ver_number && tamanho > 7 && not ver_Simbolo
                         casoMedio = ver_number && tamanho > 7 && tamanho < 10 && ver_Simbolo
-                        casoForte = ver_number && tamanho >= 10 && ver_Simbolo
+                        casoForte = ver_number && tamanho >= 10 && ver_Simbolo && ver_Upper
 
 
 
