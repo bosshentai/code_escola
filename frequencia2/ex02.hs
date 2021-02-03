@@ -1,3 +1,4 @@
+
 --2.1
 
 teste1 = 4
@@ -11,7 +12,8 @@ resultado1 = soma teste1
 -- naofeito
 teste2 = [1..10]
 
-
+minimo lista = foldr1 min lista
+resultado2 =  minimo teste2
 
 --2.3
 teste3 = [1..30]

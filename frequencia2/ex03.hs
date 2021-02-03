@@ -10,7 +10,7 @@ altMap (valor1,valor2) lista = map ( reste (valor1,valor2) ) lista
 
 
 resultado = altMap(numero1,numero2) teste
-resultado2 = altMap2(numero1,numero2) teste
+--resultado2 = altMap2(numero1,numero2) teste
 --3.2
 teste2 = [("hernani",12),("lomba",3),("tewtew",12),("asda",10)]
 
